@@ -1,9 +1,21 @@
 class CoffeeShop:
     
-    def __init__(self, name, till, drinks):
+    def __init__(self, name, till, stock):
         self.name = name
         self.till = till
-        self.drinks = drinks
+        
+        self.stock = stock
 
     def increase_till(self, amount):
         self.till += amount
+
+    
+    def get_total_stock_value(self):
+        total_stock_price=0
+        for stock_item in self.stock:
+            total_stock_price += stock_item["price"]
+        return(total_stock_price)
+
+
+    def get_stock_value_of_drinks(self):
+        pass
