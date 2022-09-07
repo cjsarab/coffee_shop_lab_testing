@@ -13,7 +13,7 @@ class CoffeeShop:
     def get_total_stock_value(self):
         total_stock_price=0
         for stock_item in self.stock:
-            total_stock_price += stock_item["price"]
+            total_stock_price += stock_item["price"] * stock_item["total"]
         return(total_stock_price)
 
 
@@ -21,5 +21,7 @@ class CoffeeShop:
         total_stock_price=0
         for stock_item in self.stock:
             if stock_item["type"]== "drink":
-                total_stock_price += stock_item["price"]
+                total_stock_price += stock_item["price"] * stock_item["total"]
         return(total_stock_price)
+    
+    

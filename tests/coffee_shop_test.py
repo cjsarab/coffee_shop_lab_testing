@@ -8,17 +8,20 @@ class TestCoffeeShop(unittest.TestCase):
                     {   "type": "drink",
                         "name" : "Latte",
                         "price": 2.50,
-                        "energy": 5
+                        "energy": 5,
+                        "total": 50
                         },
                     {   "type": "drink",
                         "name" : "Mocha",
                         "price": 3.50,
-                        "energy": 10
+                        "energy": 10,
+                        "total": 100
                         },
                     {   "type": "food",
                         "name" : "Burger",
                         "price": 8.00,
-                        "energy": 50
+                        "energy": 50,
+                        "total": 10
                         }
                 ]
 
@@ -33,8 +36,8 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_get_total_stock_value(self):
         total_stock_value= self.coffee_shop.get_total_stock_value()
-        self.assertEqual(14, total_stock_value)
+        self.assertEqual(555, total_stock_value)
 
     def test_get_stock_value_of_drinks(self):
         total_stock_value= self.coffee_shop.get_stock_value_of_drinks()
-        self.assertEqual(6, total_stock_value)
+        self.assertEqual(475, total_stock_value)
