@@ -18,4 +18,8 @@ class CoffeeShop:
 
 
     def get_stock_value_of_drinks(self):
-        pass
+        total_stock_price=0
+        for stock_item in self.stock:
+            if stock_item["type"]== "drink":
+                total_stock_price += stock_item["price"]
+        return(total_stock_price)

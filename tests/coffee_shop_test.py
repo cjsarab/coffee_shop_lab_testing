@@ -34,3 +34,7 @@ class TestCoffeeShop(unittest.TestCase):
     def test_get_total_stock_value(self):
         total_stock_value= self.coffee_shop.get_total_stock_value()
         self.assertEqual(14, total_stock_value)
+
+    def test_get_stock_value_of_drinks(self):
+        total_stock_value= self.coffee_shop.get_stock_value_of_drinks()
+        self.assertEqual(6, total_stock_value)
